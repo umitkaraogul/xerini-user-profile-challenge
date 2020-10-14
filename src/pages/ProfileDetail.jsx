@@ -1,24 +1,30 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Form, Button, Segment } from "semantic-ui-react";
-import ProfileService from "../services/ProfileService";
+import AppContext from "../context/AppContext";
 
 const ProfileDetail = () => {
   const { profileId } = useParams();
   const [profile, setProfile] = useState(null);
   const [isEditing, setIsEditing] = useState(true);
+  const { appState, setAppState } = useContext(AppContext);
 
   useEffect(() => {
-    const users = ProfileService().users;
-    const activeProfile = users.find((user) => (user.id = profileId));
+    const activeProfile = appState.users.find((user) => (user.id = profileId));
     setProfile(activeProfile);
-  }, [profileId]);
+  }, [profileId, appState.users]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsEditing(false);
-    //TODO:complete
+    setAppState({
+      ...appState,
+      users: [
+        ...appState.users.filter((user) => user.id !== profile.id),
+        profile,
+      ],
+    });
   };
 
   return (

@@ -17,8 +17,10 @@ const Navigation = () => (
       </Link>
     </Menu.Item>
     <Menu.Item>
-      <Icon name="log out" />
-      Logout
+      <Link to="/logout">
+        <Icon name="log out" />
+        Logout
+      </Link>
     </Menu.Item>
   </Sidebar>
 );

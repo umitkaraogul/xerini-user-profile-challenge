@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ProfileList } from "../components/Profile";
-import ProfileService from "../services/ProfileService";
+import AppContext from "../context/AppContext";
 
 const Profile = () => {
-  const users = ProfileService().users;
-  return <ProfileList users={users} />;
+  const { appState } = useContext(AppContext);
+  return <ProfileList users={appState.users} />;
 };
 export default Profile;
