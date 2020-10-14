@@ -27,7 +27,7 @@ const Contact = ({ selectedContactTypes, onChange, disabled }) => {
       (contactType) => preferenceContactType[contactType]
     );
     onChange(checkedContactTypes);
-  }, [preferenceContactType]);
+  }, [preferenceContactType]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div>
