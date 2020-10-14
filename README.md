@@ -26,12 +26,12 @@ We expect to see the whole project with a structure that you would typically emp
 7. The user presses Back and goes back to (2).
 8. The user clicks the “Profile” link again and goes to the profile page which should, again, show the updated data they edited in step (5).
 
-### Prerequisites
+## Prerequisites
 
 - Nodejs
 - Git
 
-### Installing
+## Installing
 
 Install [npm](https://nodejs.org/en/download/) or [Yarn](https://yarnpkg.com)
 
@@ -63,10 +63,10 @@ You can test [the application on Netlify.](https://xerini-user-profile-challenge
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/83b81df8-7a20-4950-bcbf-52a95da73d84/deploy-status)](https://app.netlify.com/sites/xerini-user-profile-challenge/deploys)
 
-## Built With
+### Built With
 
 - [yarn](https://yarnpkg.com/) - JavaScript Package Manager
 
-## Authors
+#### Authors
 
 - **Umit Karaogul** - _Initial work_ - [xerini-user-profile-challenge](https://github.com/umitkaraogul/xerini-user-profile-challenge)

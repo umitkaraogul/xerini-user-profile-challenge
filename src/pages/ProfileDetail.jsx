@@ -3,6 +3,7 @@ import { useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Form, Button, Segment } from "semantic-ui-react";
 import AppContext from "../context/AppContext";
+import { Contact } from "../components/Contact";
 
 const ProfileDetail = () => {
   const { profileId } = useParams();
@@ -125,19 +126,17 @@ const ProfileDetail = () => {
             }
             disabled={!isEditing}
           />
-          <Form.Input
-            label="contact"
-            placeholder="contact"
-            value={profile.preferences.contact.join()}
-            onChange={({ target }) =>
+          <Contact
+            selectedContactTypes={profile.preferences.contact}
+            onChange={(concat) => {
               setProfile({
                 ...profile,
                 preferences: {
                   ...profile.preferences,
-                  contact: target.value.split(","),
+                  contact: concat,
                 },
-              })
-            }
+              });
+            }}
             disabled={!isEditing}
           />
 
