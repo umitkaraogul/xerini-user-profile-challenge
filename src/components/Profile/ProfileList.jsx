@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Table, Button } from "semantic-ui-react";
 import ProfileItem from "./ProfileItem";
 
@@ -31,9 +32,11 @@ const ProfileList = ({ users }) => {
       <Table.Footer fullWidth>
         <Table.Row>
           <Table.HeaderCell colSpan="8">
-            <Button floated="right" size="small">
-              Cancel
-            </Button>
+            <Link to="/">
+              <Button floated="right" size="small">
+                Cancel
+              </Button>
+            </Link>
           </Table.HeaderCell>
         </Table.Row>
       </Table.Footer>

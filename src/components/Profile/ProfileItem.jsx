@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Table, Button } from "semantic-ui-react";
 
 const ProfileItem = ({ user }) => (
@@ -14,9 +15,11 @@ const ProfileItem = ({ user }) => (
     <Table.Cell>{user.company}</Table.Cell>
     <Table.Cell>{user.preferences.contact.join()}</Table.Cell>
     <Table.Cell>
-      <Button floated="right" primary size="small">
-        Edit
-      </Button>
+      <Link to={`/profile/${user.id}`}>
+        <Button floated="right" primary size="small">
+          Edit
+        </Button>
+      </Link>
     </Table.Cell>
   </Table.Row>
 );
