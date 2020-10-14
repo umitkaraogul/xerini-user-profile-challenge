@@ -16,7 +16,7 @@ const ProfileList = ({ users }) => {
   ];
 
   return (
-    <Table celled padded>
+    <Table celled compact>
       <Table.Header>
         <Table.Row>
           {headers.map((header) => (

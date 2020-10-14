@@ -1,3 +1,9 @@
 .App {
   text-align: center;
 }
+
+.ui.container {
+  margin-left: 120px !important;
+  margin-right: 30px !important;
+  width: auto;
+}

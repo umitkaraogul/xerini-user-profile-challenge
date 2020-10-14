@@ -9,8 +9,8 @@ import ProfileDetail from "./pages/ProfileDetail";
 import Dashboard from "./pages/Dashboard";
 import Logout from "./pages/Logout";
 
-import "./App.css";
 import "semantic-ui-css/semantic.min.css";
+import "./App.css";
 
 const App = () => {
   const { appState } = useContext(AppContext);
@@ -20,6 +20,7 @@ const App = () => {
         <div className="App">
           <Container textAlign="left">
             <Navigation />
+
             <Switch>
               <Route path="/" exact={true} component={Dashboard} />
               <Route path="/profile/:profileId" component={ProfileDetail} />
